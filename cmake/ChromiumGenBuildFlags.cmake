@@ -10,7 +10,7 @@ chromium_buildflag_header(
   HEADER
   "logging_buildflags.h"
   HEADER_DIR
-  "base"
+  "include/base"
   FLAGS
   "ENABLE_LOG_ERROR_NOT_REACHED=0"
 )
@@ -21,7 +21,7 @@ chromium_buildflag_header(
   HEADER
   "cfi_buildflags.h"
   HEADER_DIR
-  "base"
+  "include/base"
   FLAGS
   "CFI_CAST_CHECK=0"
   "CFI_ICALL_CHECK=0"
@@ -35,7 +35,7 @@ chromium_buildflag_header(
   HEADER
   "protected_memory_buildflags.h"
   HEADER_DIR
-  "base/memory"
+  "include/base/memory"
   FLAGS
   "USE_LLD=0"
 )
@@ -46,7 +46,7 @@ chromium_buildflag_header(
   HEADER
   "synchronization_buildflags.h"
   HEADER_DIR
-  "base/synchronization"
+  "include/base/synchronization"
   FLAGS
   "ENABLE_MUTEX_PRIORITY_INHERITANCE=0"
 )
@@ -57,7 +57,7 @@ chromium_buildflag_header(
   HEADER
   "anchor_functions_buildflags.h"
   HEADER_DIR
-  "android/library_loader"
+  "include/base/android/library_loader"
   FLAGS
   "USE_LLD=0"
   "SUPPORTS_CODE_ORDERING=0"
@@ -69,7 +69,7 @@ chromium_buildflag_header(
   HEADER
   "orderfile_buildflags.h"
   HEADER_DIR
-  "android/orderfile"
+  "include/base/android/orderfile"
   FLAGS
   "DEVTOOLS_INSTRUMENTATION_DUMPING=0"
   "ORDERFILE_INSTRUMENTATION=0"
@@ -81,7 +81,7 @@ chromium_buildflag_header(
   HEADER
   "base_win_buildflags.h"
   HEADER_DIR
-  "base/win"
+  "include/base/win"
   FLAGS
   "SINGLE_MODULE_MODE_HANDLE_VERIFIER=1"
 )
@@ -92,7 +92,7 @@ chromium_buildflag_header(
   HEADER
   "clang_profiling_buildflags.h"
   HEADER_DIR
-  "base"
+  "include/base"
   FLAGS
   "CLANG_PROFILING=0"
   "CLANG_PROFILING_INSIDE_SANDBOX=0"
@@ -106,7 +106,7 @@ chromium_buildflag_header(
   HEADER
   "debugging_buildflags.h"
   HEADER_DIR
-  "base/debug"
+  "include/base/debug"
   FLAGS
   "DCHECK_IS_CONFIGURABLE=0"
   "ENABLE_PROFILING=0"
@@ -130,7 +130,7 @@ chromium_buildflag_header(
   HEADER
   "partition_alloc_buildflags.h"
   HEADER_DIR
-  "partition_alloc"
+  "include/base/allocator/partition_allocator/src/partition_alloc"
   FLAGS
   "HAS_64_BIT_POINTERS=1"
   "HAS_MEMORY_TAGGING=0"
@@ -147,7 +147,7 @@ chromium_buildflag_header(
   "ENABLE_DANGLING_RAW_PTR_FEATURE_FLAG=0"
   "ENABLE_DANGLING_RAW_PTR_PERF_EXPERIMENT=0"
   "ENABLE_POINTER_SUBTRACTION_CHECK=0"
-  "ENABLE_POINTER_ARITHMETIC_TRAIT_CHECK=0"
+  "ENABLE_POINTER_ARITHMETIC_TRAIT_CHECK=1"
   "BACKUP_REF_PTR_EXTRA_OOB_CHECKS=0"
   "BACKUP_REF_PTR_POISON_OOB_PTR=0"
   "USE_ASAN_BACKUP_REF_PTR=0"
@@ -182,7 +182,7 @@ chromium_buildflag_header(
   HEADER
   "buildflags.h"
   HEADER_DIR
-  "base/allocator"
+  "include/base/allocator"
   FLAGS
   "USE_ALLOCATOR_SHIM=0"
   "USE_NEW_TCMALLOC=0"
@@ -196,7 +196,7 @@ chromium_buildflag_header(
   HEADER
   "debugging_buildflags.h"
   HEADER_DIR
-  "partition_alloc/partition_alloc_base/debug"
+  "include/base/partition_alloc/partition_alloc_base/debug"
   FLAGS
   "PA_DCHECK_IS_ON=0"
   "PA_EXPENSIVE_DCHECKS_ARE_ON=0"
@@ -210,7 +210,7 @@ chromium_buildflag_header(
   HEADER
   "chromeos_buildflags.h"
   HEADER_DIR
-  "build"
+  "include/build"
   FLAGS
   "IS_CHROMEOS_ASH=0"
   "PA_IS_CHROMEOS_ASH=0"
@@ -222,7 +222,7 @@ chromium_buildflag_header(
   HEADER
   "feature_list_buildflags.h"
   HEADER_DIR
-  "base"
+  "include/base"
   FLAGS
   "ENABLE_BANNED_BASE_FEATURE_PREFIX=0"
 )
@@ -233,7 +233,7 @@ chromium_buildflag_header(
   HEADER
   "raw_ptr_buildflags.h"
   HEADER_DIR
-  "partition_alloc"
+  "include/base/partition_alloc"
   FLAGS
   "RAW_PTR_ZERO_ON_CONSTRUCT=0"
   "RAW_PTR_ZERO_ON_MOVE=0"
@@ -246,7 +246,7 @@ chromium_buildflag_header(
   HEADER
   "fuzzing_buildflags.h"
   HEADER_DIR
-  "base"
+  "include/base"
   FLAGS
   "USE_FUZZING_ENGINE=0"
 )
@@ -257,7 +257,7 @@ chromium_buildflag_header(
   HEADER
   "tracing_buildflags.h"
   HEADER_DIR
-  "base"
+  "include/base"
   FLAGS
   "ENABLE_BASE_TRACING=0"
   "USE_PERFETTO_CLIENT_LIBRARY=0"
@@ -271,7 +271,7 @@ chromium_buildflag_header(
   HEADER
   "sanitizer_buildflags.h"
   HEADER_DIR
-  "base"
+  "include/base"
   FLAGS
   "IS_HWASAN=0"
   "USING_SANITIZER=0"
@@ -283,7 +283,7 @@ chromium_buildflag_header(
   HEADER
   "ios_cronet_buildflags.h"
   HEADER_DIR
-  "base/message_loop"
+  "include/base/message_loop"
   FLAGS
   "CRONET_BUILD=0"
 )
@@ -294,7 +294,7 @@ chromium_buildflag_header(
   HEADER
   "blink_buildflags.h"
   HEADER_DIR
-  "build"
+  "include/build"
   FLAGS
   "USE_BLINK=0"
 )
@@ -305,10 +305,10 @@ chromium_buildflag_header(
   HEADER
   "rust_buildflags.h"
   HEADER_DIR
-  "base"
+  "include/base"
   FLAGS
-  "RUST_JSON_READER=0"
-  "RUST_BASE_CONVERSIONS=0"
+  "BUILD_RUST_JSON_READER=0"
+  "BUILD_RUST_BASE_CONVERSIONS=0"
 )
 
 chromium_buildflag_header(
@@ -317,7 +317,7 @@ chromium_buildflag_header(
   HEADER
   "ios_buildflags.h"
   HEADER_DIR
-  "build"
+  "include/build"
   FLAGS
   "IS_IOS_APP_EXTENSION=0"
 )
@@ -328,7 +328,7 @@ chromium_buildflag_header(
   HEADER
   "power_monitor_buildflags.h"
   HEADER_DIR
-  "base/power_monitor"
+  "include/base/power_monitor"
   FLAGS
   "HAS_BATTERY_LEVEL_PROVIDER_IMPL=0"
 )
