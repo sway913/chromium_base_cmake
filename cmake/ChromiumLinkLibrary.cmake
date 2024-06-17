@@ -30,10 +30,6 @@ if(DCHECK_ALWAYS_ON)
     list(APPEND BASE_PUBLIC_DEFINES DCHECK_ALWAYS_ON)
 endif()
 
-# partition_alloc path at build directories
-set(PA_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/base/allocator/partition_allocator/src")
-include_directories(${PA_INCLUDES})
-message(STATUS "PARTITION_ALLOC_INCLUDES: ${PA_INCLUDES}") 
 
 # source path
 set(BASE_ROOT_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/base")
@@ -47,8 +43,15 @@ include_directories(${ABSEIL_INCLUDES})
 set(ROOT_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}")
 include_directories(${ROOT_INCLUDES})
 
-
 list(APPEND BASE_INCLUDES ${CMAKE_BINARY_DIR}/include)
+
+# partition_alloc path at build directories
+set(PA_INCLUDES "${BASE_INCLUDES}/base/allocator/partition_allocator/src")
+include_directories(${PA_INCLUDES})
+
+# Maybe using relative paths
+set(PA_SOURCES_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/base/allocator/partition_allocator/src")
+include_directories(${PA_SOURCES_INCLUDES})
 
 list(APPEND CHROMIUM_COMMON_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR})
 

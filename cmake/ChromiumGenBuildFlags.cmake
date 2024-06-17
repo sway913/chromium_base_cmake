@@ -196,7 +196,7 @@ chromium_buildflag_header(
   HEADER
   "debugging_buildflags.h"
   HEADER_DIR
-  "include/base/partition_alloc/partition_alloc_base/debug"
+  "include/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug"
   FLAGS
   "PA_DCHECK_IS_ON=0"
   "PA_EXPENSIVE_DCHECKS_ARE_ON=0"
@@ -233,7 +233,7 @@ chromium_buildflag_header(
   HEADER
   "raw_ptr_buildflags.h"
   HEADER_DIR
-  "include/base/partition_alloc"
+  "include/base/allocator/partition_allocator/src/partition_alloc"
   FLAGS
   "RAW_PTR_ZERO_ON_CONSTRUCT=0"
   "RAW_PTR_ZERO_ON_MOVE=0"
