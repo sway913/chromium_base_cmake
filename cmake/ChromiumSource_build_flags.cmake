@@ -1,6 +1,6 @@
 ﻿include_guard(DIRECTORY)
 
-include(ChromiumBuildFlagHeader)
+include(ChromiumSource_helps)
 
 
 
@@ -337,13 +337,13 @@ chromium_buildflag_header(
 chromium_copy_file(
   NAME "copy config"
   INPUT_FILE "${CMAKE_CURRENT_SOURCE_DIR}/codegen/build_config.h"
-  OUTPUT_DIR "build"
+  OUTPUT_DIR "include/build"
 )
 
 chromium_copy_file(
   NAME "copy flag"
   INPUT_FILE "${CMAKE_CURRENT_SOURCE_DIR}/codegen/buildflag.h"
-  OUTPUT_DIR "build"
+  OUTPUT_DIR "include/build"
 )
 
 

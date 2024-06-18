@@ -112,6 +112,7 @@ list(APPEND COMPONENT_BASE_SOURCES_ANDROID_UNPROCESSED
   "android/unguessable_token_android.h"
   "memory/platform_shared_memory_region_android.cc"
   "system/sys_info_android.cc"
+
   # Android uses some Linux sources.
   "debug/elf_reader.cc"
   "debug/elf_reader.h"
@@ -128,24 +129,24 @@ list(APPEND COMPONENT_BASE_SOURCES_ANDROID_UNPROCESSED
   "system/sys_info_linux.cc"
 )
 
-if (can_unwind_with_cfi_table) {
+if(can_unwind_with_cfi_table) {
   list(APPEND COMPONENT_BASE_SOURCES_ANDROID_UNPROCESSED
     "trace_event/cfi_backtrace_android.cc"
     "trace_event/cfi_backtrace_android.h"
   )
 endif(can_unwind_with_cfi_table)
 
-if (TARGET_ARM) {
+if(TARGET_ARM) {
   list(APPEND COMPONENT_BASE_SOURCES_ANDROID_UNPROCESSED
     "profiler/chrome_unwinder_android.cc"
     "profiler/chrome_unwinder_android.h"
   )
 endif()
 
-if (NOT TARGET_ARM AND NOT TARGET_ARM64) {
+if(NOT TARGET_ARM AND NOT TARGET_ARM64) {
   # The reached code profiler is only supported on Android arm arch.
   list(APPEND COMPONENT_BASE_SOURCES_ANDROID_UNPROCESSED
-   "android/reached_code_profiler_stub.cc"
+    "android/reached_code_profiler_stub.cc"
   )
 endif()
 

@@ -1,4 +1,4 @@
-﻿include(component_base_sources_helps)
+﻿include(ChromiumSource_helps)
 
 if(IS_WIN)
   chromium_source_remove(

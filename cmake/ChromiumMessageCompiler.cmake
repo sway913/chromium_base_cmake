@@ -33,4 +33,4 @@ function(chromium_message_compiler)
         RESULT_VARIABLE 
             result
     )
-endfunction(message_compiler)
+endfunction(chromium_message_compiler)

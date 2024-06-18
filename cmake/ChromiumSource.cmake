@@ -1,4 +1,4 @@
-﻿include(ChromiumBuildFlagHeader)
+﻿include(ChromiumSource_build_flags)
 
 # see component("base") in BUILD.gn
 list(APPEND COMPONENT_BASE_SOURCES_UNPROCESSED

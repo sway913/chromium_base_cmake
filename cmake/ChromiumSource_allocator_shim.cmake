@@ -39,6 +39,7 @@ if(ALLOCATOR_TCMALLOC)
   )
 elseif(ALLOCATOR_NONE)
   message(STATUS "Enabled none allocator shim")
+
   if(TARGET_ANDROID)
     list(APPEND COMPONENT_BASE_SOURCES_ALLOC_SHIM_UNPROCESSED
       allocator/allocator_shim_default_dispatch_to_linker_wrapped_symbols.cc

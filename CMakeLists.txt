@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 project(${PROJECT_NAME} VERSION ${PROJECT_VERSION})
 
-set(BASE_LIB_NAME ${PROJECT_NAME})
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
@@ -34,6 +33,7 @@ endif()
 
 list(APPEND CHROMIUM_COMMON_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR})
 
-include(SourcesFiles)
+# build sources entry
+include(ChromiumSourceMain)
 
-include(ChromiumLinkLibrary)
+add_subdirectory(example)

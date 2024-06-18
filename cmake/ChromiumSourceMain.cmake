@@ -1,7 +1,25 @@
-include_guard(DIRECTORY)
+﻿include_guard( DIRECTORY )
 
-include(ChromiumGenBuildFlags)
+set(BASE_LIB_NAME "base")
 
+include(ChromiumSource_build_flags)
+
+# common sources
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/ChromiumSource.cmake)
+
+# platform sources
+if(IS_WIN)
+  include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/ChromiumSource_win.cmake)
+endif()
+
+message(STATUS "COMPONENT_BASE_SOURCES=${COMPONENT_BASE_SOURCES}")
+
+
+# NOTE: *filter.cmake must be LAST included file from `${CMAKE_CURRENT_SOURCE_DIR}/cmake/*`
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/ChromiumSource_filter.cmake)
+
+
+# link buildflags
 list(APPEND BASE_PRIVATE_LIBRARIES chromium::base_win_buildflags)
 list(APPEND BASE_PRIVATE_LIBRARIES chromium::allocator_buildflags)
 list(APPEND BASE_PRIVATE_LIBRARIES chromium::cfi_buildflags)
